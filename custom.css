@@ -96,3 +96,21 @@
     line-height: 1.6 !important;
     margin-bottom: 15px !important;
 }
+
+/* =========================================
+   Hexo-blog-encrypt 分类封面背景样式
+   ========================================= */
+
+/* 当分类封面不存在时，使用渐变背景代替默认纯色 */
+.nexmoe-category .nexmoe-cover,
+.nexmoe-category-list .nexmoe-card::before {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    background-size: cover !important;
+}
+
+/* 或者使用随机图片API作为备用 */
+.nexmoe-category .nexmoe-cover.no-cover {
+    background-image: url('https://uapis.cn/api/v1/random/image') !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
