@@ -114,3 +114,78 @@
     background-size: cover !important;
     background-position: center !important;
 }
+
+/* =========================================
+   自定义友链页面布局
+   ========================================= */
+
+/* 隐藏 Nexmoe 原生的友链列表 */
+.nexmoe-py {
+    display: none !important;
+}
+
+/* 自定义容器：水平排列，居中 */
+.my-friends-container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 40px 30px !important;
+    padding: 40px 20px !important;
+}
+
+/* 每个友链卡片 */
+.friend-card {
+    width: 160px !important;
+    text-align: center !important;
+}
+
+/* 链接样式 */
+.friend-card a {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    color: inherit !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* 鼠标悬停时整体微微上浮 */
+.friend-card a:hover {
+    transform: translateY(-5px) !important;
+}
+
+/* 图片样式 */
+.friend-card img {
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* 鼠标悬停时图片放大 */
+.friend-card a:hover img {
+    transform: scale(1.05) !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25) !important;
+}
+
+/* 标题文字 */
+.friend-title {
+    margin-top: 15px !important;
+    margin-bottom: 5px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: #333 !important;
+    line-height: 1.3 !important;
+}
+
+/* 描述文字 */
+.friend-des {
+    margin: 0 !important;
+    font-size: 13px !important;
+    color: #888 !important;
+    line-height: 1.4 !important;
+    word-break: break-all !important;
+}
