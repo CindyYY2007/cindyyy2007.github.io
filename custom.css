@@ -191,63 +191,73 @@
 }
 
 /* =========================================
-   调整文章正文字体大小与行高
+   统一调整文章和页面的字体大小
    ========================================= */
 
-/* 针对文章正文容器和段落 */
-.nexmoe-post-content,
+/* 正文内容（同时作用于文章和页面） */
 .nexmoe-post article,
-.nexmoe-post-content p,
-.nexmoe-post article p {
-    font-size: 18px !important;      /* 字体大小：默认通常是 14px 或 15px。建议 16px 或 18px */
-    line-height: 1.8 !important;     /* 行高：字体变大后，行距必须跟着变大，否则文字会挤在一起 */
+.nexmoe-post article p,
+.nexmoe-page article,
+.nexmoe-page article p,
+.nexmoe-post-content,
+.nexmoe-page-content {
+    font-size: 18px !important;
+    line-height: 1.8 !important;
 }
 
-/* 针对文章中的列表（有序和无序列表） */
-.nexmoe-post-content li,
-.nexmoe-post article li {
+/* 列表项 */
+.nexmoe-post article li,
+.nexmoe-page article li {
     font-size: 18px !important;
     line-height: 1.8 !important;
 }
 
 /* =========================================
-   调整文章标题大小
+   统一调整文章和页面的标题大小
    ========================================= */
 
-/* 一级标题（文章标题） 
+/* 一级标题 
 .nexmoe-post h1,
+.nexmoe-page h1,
 .nexmoe-post-cover h1 {
-    font-size: 28px !important;      调小一点，默认可能 28px 或更大
+    font-size: 24px !important;
     margin: 20px 0 15px 0 !important;
 }
 */
+
 /* 二级标题 */
-.nexmoe-post h2 {
+.nexmoe-post h2,
+.nexmoe-page h2 {
     font-size: 24px !important;
     margin: 20px 0 15px 0 !important;
 }
 
 /* 三级标题 */
-.nexmoe-post h3 {
+.nexmoe-post h3,
+.nexmoe-page h3 {
     font-size: 22px !important;
     margin: 18px 0 12px 0 !important;
 }
 
 /* 四级标题 */
-.nexmoe-post h4 {
+.nexmoe-post h4,
+.nexmoe-page h4 {
     font-size: 20px !important;
     margin: 16px 0 10px 0 !important;
 }
 
 /* 五级标题 */
-.nexmoe-post h5 {
+.nexmoe-post h5,
+.nexmoe-page h5 {
     font-size: 18px !important;
     margin: 14px 0 8px 0 !important;
 }
 
 /* 六级标题 */
-.nexmoe-post h6 {
+.nexmoe-post h6,
+.nexmoe-page h6 {
     font-size: 16px !important;
     margin: 12px 0 6px 0 !important;
     font-weight: bold !important;
 }
+
