@@ -261,3 +261,40 @@
     font-weight: bold !important;
 }
 
+/* ========== 下载卡片 ========== */
+.nexmoe-download {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 1.2em 0;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: rgba(128, 128, 128, 0.08);
+  color: inherit !important;
+  text-decoration: none !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.nexmoe-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  color: inherit !important;
+}
+.nexmoe-download-icon { font-size: 30px; line-height: 1; }
+.nexmoe-download-body {
+  flex: 1; min-width: 0;
+  display: flex; flex-direction: column; gap: 3px;
+}
+.nexmoe-download-title {
+  font-weight: 600;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.nexmoe-download-desc { font-size: 0.85em; opacity: 0.6; }
+.nexmoe-download-btn {
+  flex-shrink: 0;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.85em;
+  color: #fff;
+  background: linear-gradient(135deg, #ff6b81, #ee4b6f);
+  box-shadow: 0 4px 10px rgba(238, 75, 111, 0.35);
+}
