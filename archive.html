@@ -24,13 +24,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1787484888005">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1787484930221">
     
-    <link rel="stylesheet" href="/css/style.css?v=1787484888005">
+    <link rel="stylesheet" href="/css/style.css?v=1787484930221">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1787484888005">
+            <link rel="stylesheet" href="/custom.css?v=1787484930221">
         
     
 
@@ -39,7 +39,7 @@
 <script src="/lib/fancybox/fancybox.umd.js" async></script>
 
 
-    <script async src="/js/app.js?v=1787484888005"></script>
+    <script async src="/js/app.js?v=1787484930221"></script>
     
      
 
@@ -218,8 +218,15 @@
         
 
         <li class="category-list-item">
+          <a class="category-list-link" href="/categories/新生邪修指南/我不是写作家/">我不是写作家</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
           <a class="category-list-link" href="/categories/新生邪修指南/">新生邪修指南</a>
-          <span class="category-list-count">2</span>
+          <span class="category-list-count">3</span>
         </li>
 
         
@@ -372,7 +379,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         
         
-        var hiddenTagPaths = ["tags/未公开文章/","tags/叶欣怡的小故事/","tags/模板/"];
+        var hiddenTagPaths = ["tags/未公开文章/","tags/叶欣怡的小故事/"];
         console.log("🎯 需要隐藏的标签路径:", hiddenTagPaths);
 
         var container = document.getElementById('archive-tagcloud') || 
@@ -419,12 +426,35 @@ document.addEventListener('DOMContentLoaded', function() {
             
             
             
+            <!-- 1. 默认随机图 (外部链接，无需 url_for) -->
+            
+            
+            <!-- 2. 遍历文章，寻找有效封面 -->
+            
+                
+                    <!-- 修复点：这里先赋值原始路径 -->
+                     
+                
+                
+            
+
+            <!-- 3. 渲染分类卡片 -->
+            <a class="mdui-ripple category-card" href="/categories/%E6%96%B0%E7%94%9F%E9%82%AA%E4%BF%AE%E6%8C%87%E5%8D%97/%E6%88%91%E4%B8%8D%E6%98%AF%E5%86%99%E4%BD%9C%E5%AE%B6/">
+                <!-- 修复点：在这里使用 url_for() 处理 coverx，确保本地图片路径正确！ -->
+                <div class="bg" style="background-image: url('/images/%E6%A8%A1%E6%9D%BF%E7%94%A8.jpg'); width: 100%; height: 100%; background-size: cover; background-position: center;"></div>
+                <h1>我不是写作家</h1>
+            </a>
+        
+            
             
             <!-- 1. 默认随机图 (外部链接，无需 url_for) -->
             
             
             <!-- 2. 遍历文章，寻找有效封面 -->
             
+                
+                    <!-- 修复点：这里先赋值原始路径 -->
+                     
                 
                 
             
