@@ -1,103 +1,4 @@
 /* =========================================
-   Hexo-blog-encrypt 密码框样式完全重置
-   ========================================= */
-
-/* 1. 清除容器本身的边框和阴影 */
-.hbe-container,
-#hexo-blog-encrypt,
-.hbe-input-container {
-    border: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-    background: transparent !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-/* 2. 清除所有伪元素（::before 和 ::after）*/
-.hbe-container::before,
-.hbe-container::after,
-#hexo-blog-encrypt::before,
-#hexo-blog-encrypt::after,
-.hbe-input-container::before,
-.hbe-input-container::after,
-.hbe-container *::before,
-.hbe-container *::after {
-    display: none !important;
-    content: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    background: none !important;
-}
-
-/* 3. 密码输入框样式 */
-.hbe-input-container input,
-#hexo-blog-encrypt input[type="password"],
-#hexo-blog-encrypt input[type="text"] {
-    border-radius: 8px !important;
-    border: 1px solid #e0e0e0 !important;
-    padding: 10px 15px !important;
-    background-color: #ffffff !important;
-    color: #333333 !important;
-    outline: none !important;
-    box-shadow: none !important;
-    transition: border-color 0.3s ease !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    -webkit-appearance: none !important;  /* 清除浏览器默认样式 */
-    -moz-appearance: none !important;
-    appearance: none !important;
-}
-
-/* 输入框聚焦时的效果 */
-.hbe-input-container input:focus,
-#hexo-blog-encrypt input[type="password"]:focus {
-    border-color: #ff6b6b !important;
-    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2) !important;
-    outline: none !important;
-}
-
-/* 4. 解密按钮样式 */
-.hbe-button,
-#hexo-blog-encrypt button,
-#hexo-blog-encrypt input[type="submit"] {
-    border-radius: 8px !important;
-    background-color: #ff6b6b !important;
-    color: #ffffff !important;
-    border: none !important;
-    padding: 10px 20px !important;
-    cursor: pointer !important;
-    font-weight: bold !important;
-    transition: all 0.3s ease !important;
-    margin-top: 10px !important;
-    box-shadow: none !important;
-    outline: none !important;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    appearance: none !important;
-}
-
-/* 按钮鼠标悬停效果 */
-.hbe-button:hover,
-#hexo-blog-encrypt button:hover,
-#hexo-blog-encrypt input[type="submit"]:hover {
-    background-color: #ff4c4c !important;
-    transform: translateY(-1px) !important;
-    box-shadow: none !important;
-}
-
-/* 5. 提示文字样式 */
-.hbe-container p,
-#hexo-blog-encrypt p,
-.hbe-container .hbe-abstract {
-    color: #666666 !important;
-    font-size: 14px !important;
-    line-height: 1.6 !important;
-    margin-bottom: 15px !important;
-}
-
-/* =========================================
    Hexo-blog-encrypt 分类封面背景样式
    ========================================= */
 
@@ -227,38 +128,60 @@
 
 /* 二级标题 */
 .nexmoe-post h2,
-.nexmoe-page h2 {
+.nexmoe-page h2,
+#hexo-blog-encrypt h2,
+.hbe-content h2 {
     font-size: 24px !important;
     margin: 20px 0 15px 0 !important;
 }
 
 /* 三级标题 */
 .nexmoe-post h3,
-.nexmoe-page h3 {
+.nexmoe-page h3,
+#hexo-blog-encrypt h3,
+.hbe-content h3 {
     font-size: 22px !important;
     margin: 18px 0 12px 0 !important;
 }
 
 /* 四级标题 */
 .nexmoe-post h4,
-.nexmoe-page h4 {
+.nexmoe-page h4,
+#hexo-blog-encrypt h4,
+.hbe-content h4 {
     font-size: 20px !important;
     margin: 16px 0 10px 0 !important;
 }
 
 /* 五级标题 */
 .nexmoe-post h5,
-.nexmoe-page h5 {
+.nexmoe-page h5,
+#hexo-blog-encrypt h5,
+.hbe-content h5 {
     font-size: 18px !important;
     margin: 14px 0 8px 0 !important;
 }
 
 /* 六级标题 */
 .nexmoe-post h6,
-.nexmoe-page h6 {
+.nexmoe-page h6,
+#hexo-blog-encrypt h6,
+.hbe-content h6 {
     font-size: 16px !important;
     margin: 12px 0 6px 0 !important;
     font-weight: bold !important;
+}
+
+/* 补充：确保加密文章的正文字体、行高、段落间距也与普通文章一致 */
+#hexo-blog-encrypt p,
+.hbe-content p,
+#hexo-blog-encrypt ul,
+.hbe-content ul,
+#hexo-blog-encrypt ol,
+.hbe-content ol {
+    font-size: 16px !important; /* 与主题正文一致 */
+    line-height: 1.8 !important;
+    margin-bottom: 15px !important;
 }
 
 /* ========== 下载卡片 ========== */
@@ -297,4 +220,124 @@
   color: #fff;
   background: linear-gradient(135deg, #ff6b81, #ee4b6f);
   box-shadow: 0 4px 10px rgba(238, 75, 111, 0.35);
+}
+
+/* =========================================
+   1. 确保加密文章内容完全继承主题样式（万能方案）
+   ========================================= */
+body #hexo-blog-encrypt,
+body .hbe-container,
+body .hbe-content {
+    font-family: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+}
+
+/* 强制所有内部元素也继承，但排除输入框和按钮，防止密码框样式被破坏 */
+body #hexo-blog-encrypt *:not(input):not(button):not([type="submit"]),
+body .hbe-container *:not(input):not(button):not([type="submit"]),
+body .hbe-content *:not(input):not(button):not([type="submit"]) {
+    font-family: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    color: inherit !important;
+}
+
+/* =========================================
+   2. 密码框样式（提高优先级，加上 body 前缀）
+   ========================================= */
+
+/* 1. 清除容器本身的边框和阴影 */
+body .hbe-container,
+body #hexo-blog-encrypt,
+body .hbe-input-container {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 2. 清除所有伪元素（::before 和 ::after）*/
+body .hbe-container::before,
+body .hbe-container::after,
+body #hexo-blog-encrypt::before,
+body #hexo-blog-encrypt::after,
+body .hbe-input-container::before,
+body .hbe-input-container::after,
+body .hbe-container *::before,
+body .hbe-container *::after {
+    display: none !important;
+    content: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+
+/* 3. 密码输入框样式 */
+body .hbe-input-container input,
+body #hexo-blog-encrypt input[type="password"],
+body #hexo-blog-encrypt input[type="text"] {
+    border-radius: 8px !important;
+    border: 1px solid #e0e0e0 !important;
+    padding: 10px 15px !important;
+    background-color: #ffffff !important;
+    color: #333333 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    transition: border-color 0.3s ease !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    -webkit-appearance: none !important;  /* 清除浏览器默认样式 */
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+/* 输入框聚焦时的效果 */
+body .hbe-input-container input:focus,
+body #hexo-blog-encrypt input[type="password"]:focus {
+    border-color: #ff6b6b !important;
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2) !important;
+    outline: none !important;
+}
+
+/* 4. 解密按钮样式 */
+body .hbe-button,
+body #hexo-blog-encrypt button,
+body #hexo-blog-encrypt input[type="submit"] {
+    border-radius: 8px !important;
+    background-color: #ff6b6b !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+    margin-top: 10px !important;
+    box-shadow: none !important;
+    outline: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+/* 按钮鼠标悬停效果 */
+body .hbe-button:hover,
+body #hexo-blog-encrypt button:hover,
+body #hexo-blog-encrypt input[type="submit"]:hover {
+    background-color: #ff4c4c !important;
+    transform: translateY(-1px) !important;
+    box-shadow: none !important;
+}
+
+/* 5. 提示文字样式 */
+body .hbe-container p,
+body #hexo-blog-encrypt p,
+body .hbe-container .hbe-abstract {
+    color: #666666 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 15px !important;
 }
